@@ -1,8 +1,10 @@
 import Main from "../LayOut/Main";
 import CheckOut from "../Pages/CheckOut/CheckOut";
 import Home from "../Pages/Home/Home";
+import Services from "../Pages/Home/Services/Services";
 import Login from "../Pages/Login/Login";
 import Orders from "../Pages/Orders/Orders";
+import Service from "../Pages/Services/Service";
 import SignUP from "../Pages/SignUp/SignUP";
 import PrivateRouter from "../Shared/PrivateRouter";
 
@@ -16,6 +18,10 @@ const router= createBrowserRouter([
             {
                 path:'/',
                 element:<Home></Home>
+            },
+            {
+                path:'/service',
+                element:<Services></Services>
             },
             {
                 path:"/login",

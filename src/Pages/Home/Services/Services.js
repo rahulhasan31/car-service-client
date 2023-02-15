@@ -1,9 +1,17 @@
 import { data } from 'autoprefixer';
 import React, { useEffect, useState } from 'react';
+import Loading from '../../../Shared/Loading/Loading';
 import ServicesDetailes from './ServicesDetailes';
 
 const Services = () => {
     const [services, setServices]= useState([])
+    const [loading, SetLoading]=useState(true)
+
+    useEffect(()=>{
+        setTimeout(()=>{
+        SetLoading(false)
+        }, 2500)
+    })
 
     useEffect(()=>{
         fetch('https://genius-server-tau.vercel.app/services')
@@ -12,19 +20,25 @@ const Services = () => {
     },[])
     return (
         <div>
-              <div className='text-center mb-4'>
+           {
+            loading?<Loading/>:<>
+               <div className='text-center mb-4'>
                 <p className="text-2xl font-bold text-orange-600">Services {services.length}</p>
                 <h2 className="text-5xl font-semibold">Our Service Area</h2>
                 <p>the majority have suffered alteration in some form, <br /> by injected humour, or randomised words which don't look even slightly believable. </p>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 '>
-                {
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-5 '>
+              
+                 {
                  services.map(service=><ServicesDetailes 
                  key={service._id}
                  service={service}
                  ></ServicesDetailes>)   
                 }
+              
             </div>
+            </>
+           }
         </div>
     );
 };

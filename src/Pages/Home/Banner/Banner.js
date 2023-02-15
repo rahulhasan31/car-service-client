@@ -49,14 +49,26 @@ const bannerData=[
 const Banner = () => {
     return (
       
-  <div className="carousel w-full py-10">
+  <div className=" w-full ">
 
-    {
+    {/* {
       bannerData.map(slide=> <BannerDetaile
        key={slide.id}
        slide={slide}
       ></BannerDetaile>)
-    }
+    } */}
+
+<div className="hero  ">
+  <div className="hero-content flex-col lg:flex-row">
+    <img alt='' src="https://i.ibb.co/wW5szK0/car-service-list-5332691-4453451.webp" className="lg:max-w-xl " />
+    <div>
+      <h1 className="text-3xl font-bold text-red-600">Hey Wellcome to</h1>
+      <h1 className="text-5xl font-bold text-blue-500">Car Services </h1>
+      <p className="py-6 font-medium">You can use a vehicle maintenance log to monitor the repairs of your vehicle. You can also use it to schedule the maintenance of your car</p>
+      <button className="btn btn-primary rounded-lg border-0">Get Started</button>
+    </div>
+  </div>
+</div>
 
 
 </div>

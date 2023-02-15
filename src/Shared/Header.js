@@ -9,6 +9,7 @@ const Header = () => {
   const menuItems = <>
     <li>
       <Link className='font-semibold' to={'/'}>Home</Link>
+      <Link className='font-semibold' to={'/service'}>service</Link>
 
 
     </li>
@@ -43,7 +44,7 @@ const Header = () => {
             </ul>
           </div>
           <Link to={'/'} className="btn btn-ghost normal-case text-xl">
-            <img style={{ height: '40px' }} src={logo} alt="" />
+            <img style={{ height: '40px' }} src="https://i.ibb.co/HBPPtdL/car-service-logo-2-F3-H.jpg" alt="" />
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
